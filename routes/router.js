@@ -1,18 +1,12 @@
+const express = require('express');
+const router = express.Router();
 
-let express = require('express');
-let router = express.Router();
+const ejemplo = require('../controllers/ejemplo.controllers.js');
 
-const proyecto = require('../controllers/proyecto.controllers.js');
-
-// ejemplo const ejemplo = require('../controllers/ejemplo.controllers.js');
-
-router.post('/to-do/create', proyecto.create);
-router.get('/to-do/all', proyecto.findAll);
-router.get('/to-do/onebyid/:id', proyecto.findById);
-router.put('/to-do/update/:id', proyecto.update);
-router.delete('/to-do/delete/:id', proyecto.delete);
+router.post('/to-do/create', ejemplo.create);
+router.get('/to-do/all', ejemplo.findAll);
+router.get('/to-do/onebyid/:id', ejemplo.findById);
+router.put('/to-do/update/:id', ejemplo.update);
+router.delete('/to-do/delete/:id', ejemplo.delete);
 
 module.exports = router;
-
-
-//Cambiar las variables
